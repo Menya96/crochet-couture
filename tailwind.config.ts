@@ -9,8 +9,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primaryGreen: '#283618',
+        secondaryBrown: '#bc6c25',
+        accentGold: '#fefae0',
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
+      },
+      fontFamily: {
+        caveat: ["var(--font-caveat)"],
       },
     },
   },
