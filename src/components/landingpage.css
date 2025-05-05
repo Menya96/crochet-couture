@@ -1,0 +1,125 @@
+
+.word {
+  display: inline-block;
+  transform-origin: 50% 100%;
+  opacity: 0;
+  white-space: pre;
+ 
+}
+
+.p, .button, .button2{
+  opacity:0;
+}
+
+.face {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+}
+
+.face img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Container styling with perspective */
+.container {
+  perspective: 5000px;
+  /* The perspective property defines how far the object is from the viewer */
+  /* A smaller value creates a more intense 3D effect */
+  }
+
+  .front {
+       transform: translateZ(150px);
+    }
+    
+    .back {
+      transform: rotateY(180deg) translateZ(150px);
+    }
+    
+    .right {
+      transform: rotateY(90deg) translateZ(150px);
+    }
+    
+    .left {
+      transform: rotateY(-90deg) translateZ(150px);
+      /* Rotates 90° left around Y-axis and moves 100px forward */
+    }
+    
+    .top {
+      transform: rotateX(90deg) translateZ(150px);
+      /* Rotates 90° upward around X-axis and moves 100px forward */
+    }
+    
+    .bottom {
+      transform: rotateX(-90deg) translateZ(150px);
+      /* Rotates 90° downward around X-axis and moves 100px forward */
+    }
+  
+    /* Define the rotation animation */
+    @keyframes rotate {
+     0% {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  25% {
+    transform: rotate3d(0, 1, 1, 90deg);
+  }
+  50% {
+    transform: rotate3d(1, 0, 1, 180deg);
+  }
+  75% {
+    transform: rotate3d(1, 1, 0, 240deg);
+  }
+  100% {
+    transform: rotate3d(1, 1, 1, 360deg);
+  }
+    }
+    
+
+    /* Apply the animation to the cube */
+    .cube {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: rotate 10s infinite ease-out;
+    }
+/* Cube size in smaller screen size */
+
+@media (max-width: 600px) {
+  .cube {
+    width: 150px;
+    height: 150px;
+  }
+  .face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+  }
+  .front {
+    transform: translateZ(100px);
+ }
+ 
+ .back {
+   transform: rotateY(180deg) translateZ(100px);
+ }
+ 
+ .right {
+   transform: rotateY(90deg) translateZ(100px);
+ }
+ 
+ .left {
+   transform: rotateY(-90deg) translateZ(100px);
+   /* Rotates 90° left around Y-axis and moves 100px forward */
+ }
+ 
+ .top {
+   transform: rotateX(90deg) translateZ(100px);
+   /* Rotates 90° upward around X-axis and moves 100px forward */
+ }
+ 
+ .bottom {
+   transform: rotateX(-90deg) translateZ(100px);
+   /* Rotates 90° downward around X-axis and moves 100px forward */
+ }
+}

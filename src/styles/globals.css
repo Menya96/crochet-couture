@@ -20,11 +20,6 @@ body {
   font-family: var(--font-caveat);
 }
 
-.letter {
-  display: inline-block;
-  transform-origin: 50% 100%;
-  opacity: 0;
-  white-space: pre;
-  transform: translateY(1.1em);
-}
+
+
 
