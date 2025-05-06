@@ -90,8 +90,8 @@ const Navbar: React.FC = () => {
           <div className="flex space-x-4 mt-2">
             <a href="#" className="text-lg hover:text-secondaryBrown hover:scale-110 transform transition-transform ease-out duration-200">Collections</a>
             <a href="#" className="text-lg hover:text-secondaryBrown hover:scale-110 transform transition-transform ease-out duration-200">About Us</a>
+            <a href="#" className="text-lg hover:text-secondaryBrown hover:scale-110 transform transition-transform ease-out duration-200">FAQs</a>
             <a href="#" className="text-lg hover:text-secondaryBrown hover:scale-110 transform transition-transform ease-out duration-200">Contact Us</a>
-            <a href="#" className="text-lg hover:text-secondaryBrown hover:scale-110 transform transition-transform ease-out duration-200">FAQ</a>
           </div>
         </div>
 

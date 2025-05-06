@@ -12,7 +12,7 @@ export default {
         primaryGreen: '#283618',
         secondaryBrown: '#bc6c25',
         accentGold: '#fefae0',
-        neutralBrown: '#d9a270',
+        neutralBrown: '#dda15e',
         background: 'var(--background)',
         foreground: 'var(--foreground)',
       },

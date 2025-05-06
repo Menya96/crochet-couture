@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import './collection.css'
 
 const categories = [
   { name: "Bags", image: "./images/crochet-bag.webp" },
@@ -25,10 +26,8 @@ const Collections: React.FC = () => {
         const row = card.dataset.row;
         if (entry.isIntersecting) {
           card.classList.add(`animate-${row}`);
-        } else {
-          card.classList.remove(`animate-${row}`);
         }
-      });
+      } );
     }, {
       threshold: 0.5,
     });
@@ -79,7 +78,7 @@ const Collections: React.FC = () => {
               cardRefs.current[index] = el;
             }
           }}
-          key={index} data-row={staggerVariants[index % 2]} className="card bg-gray-100 rounded-lg shadow-md p-4 flex flex-col items-center overflow-hidden hover:translate-y-[-5px] hover:rotate-[-1deg] transition duration-300 ease-in-out">
+          key={index} data-row={staggerVariants[index % 2]} className="group card bg-gray-100 rounded-lg shadow-md p-4 flex flex-col items-center overflow-hidden hover:translate-y-[-5px] hover:rotate-[-1deg] transition duration-300 ease-in-out">
             <img
             
               src={image}
@@ -87,7 +86,7 @@ const Collections: React.FC = () => {
               className="w-full h-full object-cover mb-4"
             />
             <h3 className="text-lg font-semibold text-primaryGreen capitalize">
-             {name}
+              {name}
             </h3>
           </div>
         ))}

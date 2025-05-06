@@ -1,0 +1,84 @@
+
+.card{
+    opacity: 0;
+  
+  }
+  
+  .card {
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .animate-left {
+    opacity: 1;
+  }
+  
+  .animate-right {
+    opacity: 1;
+  }
+  
+  /* Media query for larger screens */
+  
+  .heading {
+    opacity: 0;
+  }
+  .animate-heading {
+    animation: heading-reveal 0.8s ease-in-out forwards;
+  }
+  .paragraph {
+    opacity: 0;
+  }
+  .animate-paragraph {
+    animation: paragraph-reveal 0.8s ease-in-out 0.4s forwards;
+  }
+  @media (min-width: 768px) {
+    .card:nth-child(1) {
+      animation-delay: 0ms;
+    }
+    .card:nth-child(2) {
+      animation-delay: 100ms;
+    }
+    .card:nth-child(3) {
+      animation-delay: 200ms;
+    }
+    .card:nth-child(4) {
+      animation-delay: 300ms;
+    }
+      .card:nth-child(5) {
+      animation-delay: 400ms;
+    }
+      .card:nth-child(6) {
+      animation-delay: 500ms;
+    }
+      .card:nth-child(7) {
+      animation-delay: 600ms;
+    }
+      .card:nth-child(8) {
+      animation-delay: 700ms;
+    }
+  }
+  
+  @keyframes card-reveal {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1; transform: scale(1);
+    }
+  }
+  
+  
+  @keyframes heading-reveal {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes paragraph-reveal {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
