@@ -4,6 +4,7 @@ import LandingPage from "../components/landingpage";
 import Collections from "../components/Collections";
 import AboutUs from "../components/AboutUs";
 import FAQ from "../components/FAQ";
+import ContactUs from "../components/ContactUs";
 import { sampleFAQs } from "../components/FAQ";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <FAQ
         items={sampleFAQs}
       />
+      <ContactUs/>
     </div>
   );
 }
