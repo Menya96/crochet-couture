@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { auth } from '../utils/firebase';
 import { createUserWithEmailAndPassword, signInWithRedirect, GoogleAuthProvider, getRedirectResult } from 'firebase/auth';
+import { useRouter } from 'next/router';
 
 const SignupForm: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
 
+  const router = useRouter();
   const handleSubmit = async (e: React.FormEvent) => {
+  const router = useRouter();
     e.preventDefault();
     setError(null); // Clear previous errors
     try {
@@ -48,8 +51,7 @@ const SignupForm: React.FC = () => {
         if (result) {
           // User signed in with Google successfully after redirect
           console.log('User signed in with Google successfully after redirect!');
-          // You can access user info via result.user
-          // TODO: Add redirection logic here
+          router.push('/'); // TODO: Replace with actual redirect path
           // Optionally, redirect the user to a different page
         }
       } catch (error: any) {

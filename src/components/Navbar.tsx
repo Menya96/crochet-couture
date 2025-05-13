@@ -49,7 +49,7 @@ const Navbar: React.FC = () => {
           </div>
           <ul className="flex flex-col items-start py-4 pl-24">
           {[
-            { icon: faUser, text: 'User' },
+            { icon: faUser, text: 'Sign In' },
             { icon: faHeart, text: 'Wishlist' },
             { icon: faArchive, text: 'Collections' },
             { icon: faUsers, text: 'About Us' },
