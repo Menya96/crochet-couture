@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
             <a href="#" className="group relative hover:text-secondaryBrown">
               <FontAwesomeIcon icon={faUser} className="text-accentGold text-xl transform transition-transform ease-out duration-300 group-hover:translate-y-[-20px] group-hover:scale-0" />
               <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-accentGold opacity-0 group-hover:opacity-100 transition-opacity ease-out duration-300">
-                User
+                Sign In
               </span>
             </a>
             <a href="#" className="group relative hover:text-secondaryBrown">
