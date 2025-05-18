@@ -13,28 +13,28 @@ const LoginPage: React.FC = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-accentGold">
-      <form onSubmit={handleSubmit} className="bg-accentGold p-8 rounded shadow-xl w-full max-w-sm">
+      <form onSubmit={handleSubmit} className="flex justify-center items-center flex-col bg-accentGold p-8 rounded shadow-xl w-full max-w-sm">
         <h2 className="text-2xl font-bold mb-6 text-center text-primaryGreen">Log In</h2>
-        <div className="mb-4">
-          <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
-            Email:
-          </label>
-          <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="email"
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
+        <div className="mb-4 flex flex-col items-start">
+            <label htmlFor="email" className='text-xl text-left font-bold text-primaryGreen m-2'>
+              Email:
+            </label>
+            <input
+              className='border border-secondaryBrown rounded-md p-2 w-64 focus:border-dotted focus:outline-none'
+              type="email"
+              placeholder='email'
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
         </div>
-        <div className="mb-6">
-          <label htmlFor="password" className="block text-gray-700 text-sm font-bold mb-2">
+        <div className="mb-4 flex flex-col items-start">
+          <label htmlFor="password" className="text-xl text-left font-bold text-primaryGreen m-2">
             Password:
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            className='border border-secondaryBrown rounded-md p-2 w-64 focus:border-dotted focus:outline-none'
             id="password"
             type="password"
             placeholder="Password"
@@ -43,12 +43,12 @@ const LoginPage: React.FC = () => {
             required
           />
         </div>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-center">
           <button
-            className="bg-primaryGreen hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="mt-4 bg-primaryGreen text-accentGold hover:scale-105 hover:shadow-lg py-2 px-4 rounded flex items-center justify-center transition-all duration-300 ease-in-out"
             type="submit"
           >
-            Sign In
+          Log In
           </button>
         </div>
       </form>
