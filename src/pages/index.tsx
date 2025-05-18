@@ -8,6 +8,7 @@ import ContactUs from "../components/ContactUs";
 import ProductCard from "../components/ProductCard"; 
 import SignupForm from "../components/SignupForm";
 import { sampleFAQs } from "../components/FAQ";
+import LoginPage from "../pages/login"
 
 export default function Home() {
   // Dummy product data
@@ -20,6 +21,7 @@ export default function Home() {
 
   return (
     <div className="font-caveat">
+      <LoginPage />
       <Navbar />
       <SignupForm />
       <ProductCard product={dummyProduct} />
